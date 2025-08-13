@@ -6,6 +6,8 @@ public class Empleado {
     private int horasTrabajadas;
     private Departamento departamento;
     private double tarifaHora;
+    protected String genero;
+    
 
     public Empleado(){}
     public Empleado(String nombre, double salarioBase, int horasTrabajadas, double tarifaHora, Departamento departamento) {
@@ -17,24 +19,39 @@ public class Empleado {
     }
 
     public double calcularSalario() {
+        validarSalarioYHoras();
+        double salarioTotal = salarioBase;
+        salarioTotal += calcularHorasExtra();
+        salarioTotal += calcularBonoDepartamento();
+        return salarioTotal;
+    }
+
+    private void validarSalarioYHoras() {
         if (salarioBase <= 0) {
             throw new IllegalArgumentException("El salario debe ser mayor o igual a 0");
         }
-    
         if (horasTrabajadas < 0) {
             throw new IllegalArgumentException("Las horas trabajadas deben ser mayor o igual a 0");
         }
-    
-        double salarioTotal = salarioBase;
+    }
 
-        // Horas trabajadas normales = 40
+    private double calcularHorasExtra() {
         if (horasTrabajadas > 40) {
-            salarioTotal += (horasTrabajadas - 40) * 50; // Pago de horas extra
+            return (horasTrabajadas - 40) * 50;
         }
-        
-        salarioTotal +=departamento.obtenerSalarioDepartamento();
+        return 0;
+    }
 
-        return salarioTotal;
+    private double calcularBonoDepartamento() {
+        departamento.obtenerSalarioDepartamento();
+    }
+
+    public void imprimirDetalles() {
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("Genero: " + getNombre());
+        System.out.println("Salario: " + getSalarioBase());
+        System.out.println("Horas trabajadas: " + getHorasTrabajadas());
+        System.out.println("Departamento: " + getDepartamento());
     }
 
     public String getNombre() {

@@ -2,7 +2,6 @@ import Departamentos.Departamento;
 
 public class EmpleadoTemporario extends Empleado {
     private String nombre;
-    private String genero;
     private double salarioBase;
     private int horasTrabajadas;
     private Departamento departamento;
@@ -18,11 +17,7 @@ public class EmpleadoTemporario extends Empleado {
     }
 
     public void imprimirDetalles() {
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Genero: " + super.getNombre());
-        System.out.println("Salario: " + salarioBase);
-        System.out.println("Horas trabajadas: " + horasTrabajadas);
-        System.out.println("Departamento: " + departamento);
+        super.imprimirDetalles();
         System.out.println("Meses de contrato: " + mesesContrato);
     }
 
