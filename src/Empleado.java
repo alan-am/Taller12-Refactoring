@@ -1,3 +1,4 @@
+    
 public class Empleado {
     private String nombre;
     private double salarioBase;
@@ -47,6 +48,13 @@ public class Empleado {
             default:
                 return 0;
         }
+    }
+
+    public void imprimirDetallesBase() {
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("Salario: " + getSalarioBase());
+        System.out.println("Horas trabajadas: " + getHorasTrabajadas());
+        System.out.println("Departamento: " + getDepartamento());
     }
 
     public String getNombre() {

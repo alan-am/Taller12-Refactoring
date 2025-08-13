@@ -8,13 +8,10 @@ public class EmpleadoPorHoras extends Empleado {
     }
 
     public void imprimirDetalles() {
-        System.out.println("Nombre: " + super.getNombre());
-        System.out.println("Genero: " + super.getNombre());
-        System.out.println("Salario: " + super.getSalarioBase());
-        System.out.println("Horas trabajadas: " + super.getHorasTrabajadas());
-        System.out.println("Departamento: " + super.getDepartamento());
+        super.imprimirDetallesBase();
+        System.out.println("Genero: " + genero);
     }
-
+    
     @Override
     public double calcularSalario() {
         return super.getHorasTrabajadas() * super.getTarifaHora();
