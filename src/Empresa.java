@@ -17,7 +17,13 @@ public class Empresa {
     }
 
     public List<Empleado> obtenerEmpleadosPorHorasTrabajadasaPartirDe(int horas) {
-        return empleados.stream().filter(e -> e.getHorasTrabajadas() > horas).toList();
+        List<Empleado> empleadosPorTipo = new ArrayList<>();
+        for (Empleado empleado : empleados) {
+            if (empleado.getHorasTrabajadas()>horas) {
+                empleadosPorTipo.add(empleado);
+            }
+        }
+        return empleadosPorTipo;
     }
 
     // Más metodos
