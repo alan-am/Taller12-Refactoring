@@ -5,6 +5,8 @@ public class Empleado {
     private int horasTrabajadas;
     private String departamento;
     private double tarifaHora;
+    protected String genero;
+    
 
     public Empleado(){}
     public Empleado(String nombre, double salarioBase, int horasTrabajadas, double tarifaHora, String departamento) {
@@ -52,6 +54,11 @@ public class Empleado {
 
     public void imprimirDetallesBase() {
         System.out.println("Nombre: " + getNombre());
+    }
+    
+    public void imprimirDetalles() {
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("Genero: " + getNombre());
         System.out.println("Salario: " + getSalarioBase());
         System.out.println("Horas trabajadas: " + getHorasTrabajadas());
         System.out.println("Departamento: " + getDepartamento());
