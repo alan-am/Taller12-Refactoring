@@ -1,9 +1,10 @@
 package Departamentos;
 
-public class DepartamentoSistemas extends Departamento {
+public class DepartamentoMedico extends Departamento {
     
     @Override
     public double obtenerSalarioDepartamento() {
-        return 20;
+        return 0;
     }
+
 }

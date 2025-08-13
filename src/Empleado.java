@@ -30,7 +30,7 @@ public class Empleado {
         } else {
             throw new IllegalArgumentException("El salario debe ser mayor o igual a 0");
         }
-        
+
         salarioTotal +=departamento.obtenerSalarioDepartamento();
 
         return salarioTotal;
@@ -68,11 +68,10 @@ public class Empleado {
         this.tarifaHora = tarifaHora;
     }
 
-    public String getDepartamento() {
+    public Departamento getDepartamento() {
         return departamento;
     }
-
-    public void setDepartamento(String departamento) {
+    public void setDepartamento(Departamento departamento) {
         this.departamento = departamento;
     }
 
