@@ -9,6 +9,11 @@ public class EmpleadoPorHoras extends Empleado {
         this.genero = genero;
     }
 
+    public void imprimirDetalles() {
+        super.imprimirDetallesBase();
+        System.out.println("Genero: " + genero);
+    }
+    
     @Override
     public double calcularSalario() {
         return super.getHorasTrabajadas() * super.getTarifaHora();

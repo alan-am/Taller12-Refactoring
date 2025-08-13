@@ -1,5 +1,6 @@
 import Departamentos.Departamento;
 
+    
 public class Empleado {
     private String nombre;
     private double salarioBase;
@@ -46,6 +47,10 @@ public class Empleado {
         departamento.obtenerSalarioDepartamento();
     }
 
+    public void imprimirDetallesBase() {
+        System.out.println("Nombre: " + getNombre());
+    }
+    
     public void imprimirDetalles() {
         System.out.println("Nombre: " + getNombre());
         System.out.println("Genero: " + getNombre());

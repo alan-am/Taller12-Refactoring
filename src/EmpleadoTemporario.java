@@ -13,7 +13,6 @@ public class EmpleadoTemporario extends Empleado {
         this.horasTrabajadas = horasTrabajadas;
         this.departamento = departamento;
         this.mesesContrato = mesesContrato;
-        this.genero = genero;
     }
 
     public void imprimirDetalles() {
